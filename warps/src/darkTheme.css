@@ -1,0 +1,351 @@
+/* ============================================================
+   WARPS — DARK THEME
+   Drop this import into App.css or main.jsx.
+   Applied when <body class="dark-theme"> is set.
+   ZERO changes to existing component code needed.
+   ============================================================ */
+
+/* ── CSS Variables ─────────────────────────────────────────── */
+body.dark-theme {
+  --bg-page:          #07071A;
+  --bg-surface:       #0F0F28;
+  --bg-card:          rgba(255,255,255,0.04);
+  --bg-card-hover:    rgba(255,255,255,0.07);
+  --bg-glass:         rgba(15,15,40,0.85);
+  --bg-input:         rgba(255,255,255,0.05);
+  --border:           rgba(108,99,255,0.18);
+  --border-strong:    rgba(108,99,255,0.35);
+  --text-primary:     #F0EEFF;
+  --text-secondary:   #A89EC9;
+  --text-muted:       #5C547A;
+  --accent:           #6C63FF;
+  --accent-glow:      rgba(108,99,255,0.35);
+  --scrollbar:        rgba(108,99,255,0.25);
+}
+
+/* ── Page backgrounds ──────────────────────────────────────── */
+body.dark-theme,
+body.dark-theme #root,
+body.dark-theme [style*="background: #E8ECFF"],
+body.dark-theme [style*="background: #E8ECFF;"],
+body.dark-theme [style*="background:#E8ECFF"] {
+  background: #07071A !important;
+}
+
+body.dark-theme [style*="background: 'linear-gradient(135deg, #F0F4FF"],
+body.dark-theme [style*="background: linear-gradient(135deg, #F0F4FF"] {
+  background: linear-gradient(135deg, #07071A 0%, #0A0820 50%, #0C0818 100%) !important;
+}
+
+/* ── Settings page background ──────────────────────────────── */
+body.dark-theme [style*="linear-gradient(135deg, #F0F4FF 0%, #F5F0FF 50%, #FAF0FF 100%)"] {
+  background: linear-gradient(135deg, #07071A 0%, #0A0820 50%, #0C0818 100%) !important;
+}
+
+/* ── Sidebar ───────────────────────────────────────────────── */
+body.dark-theme aside,
+body.dark-theme [class*="sidebar"],
+body.dark-theme nav {
+  background: rgba(8,8,22,0.97) !important;
+  border-right-color: rgba(108,99,255,0.15) !important;
+}
+
+body.dark-theme aside * {
+  color: #A89EC9 !important;
+}
+
+body.dark-theme aside h1,
+body.dark-theme aside [style*="font-weight: 800"],
+body.dark-theme aside [style*="fontWeight: 800"],
+body.dark-theme aside [style*="fontWeight: '800'"] {
+  color: #F0EEFF !important;
+}
+
+/* Sidebar active item */
+body.dark-theme aside [style*="background: rgba(108,99,255"] {
+  background: rgba(108,99,255,0.2) !important;
+  border-color: rgba(108,99,255,0.35) !important;
+}
+
+/* Sidebar search input */
+body.dark-theme aside input {
+  background: rgba(255,255,255,0.05) !important;
+  border-color: rgba(108,99,255,0.18) !important;
+  color: #F0EEFF !important;
+}
+
+body.dark-theme aside input::placeholder {
+  color: #5C547A !important;
+}
+
+/* Sidebar "New Chat" button — keep accent, just deepen */
+body.dark-theme aside button[style*="background: linear-gradient(135deg, #6C63FF"] {
+  box-shadow: 0 4px 24px rgba(108,99,255,0.45) !important;
+}
+
+/* Sidebar chat list items */
+body.dark-theme aside [style*="background: rgba(255,255,255"] {
+  background: rgba(255,255,255,0.04) !important;
+  border-color: rgba(108,99,255,0.12) !important;
+}
+
+body.dark-theme aside [style*="color: #374151"],
+body.dark-theme aside [style*="color: #111827"],
+body.dark-theme aside [style*="color: #1F2937"] {
+  color: #C4BDDE !important;
+}
+
+body.dark-theme aside [style*="color: #6B7280"],
+body.dark-theme aside [style*="color: #9CA3AF"] {
+  color: #5C547A !important;
+}
+
+/* ── Top bar ───────────────────────────────────────────────── */
+body.dark-theme [style*="rgba(255,255,255,0.82)"] {
+  background: rgba(10,8,28,0.92) !important;
+  border-bottom-color: rgba(108,99,255,0.18) !important;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.4) !important;
+}
+
+body.dark-theme [style*="rgba(255,255,255,0.8)"] {
+  background: rgba(10,8,28,0.85) !important;
+}
+
+/* ── Chat area ─────────────────────────────────────────────── */
+body.dark-theme main {
+  background: radial-gradient(ellipse 70% 50% at 55% 5%, rgba(108,99,255,0.1) 0%, transparent 60%) !important;
+}
+
+/* Chat messages scroll area */
+body.dark-theme .chat-scroll::-webkit-scrollbar-thumb {
+  background: rgba(108,99,255,0.3) !important;
+}
+
+/* ── Message bubbles ───────────────────────────────────────── */
+/* User bubble */
+body.dark-theme [style*="background: linear-gradient(135deg, #6C63FF"] {
+  box-shadow: 0 4px 20px rgba(108,99,255,0.4) !important;
+}
+
+/* Assistant bubble — white → dark glass */
+body.dark-theme [style*="background: rgba(255,255,255,0.95)"],
+body.dark-theme [style*="background: rgba(255,255,255, 0.95)"],
+body.dark-theme [style*="background:rgba(255,255,255,0.95)"] {
+  background: rgba(255,255,255,0.05) !important;
+  border-color: rgba(108,99,255,0.18) !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3) !important;
+}
+
+body.dark-theme [style*="background: white"],
+body.dark-theme [style*="background:white"],
+body.dark-theme [style*="background: #fff"],
+body.dark-theme [style*="background: #FFF"],
+body.dark-theme [style*="background: #FFFFFF"] {
+  background: rgba(255,255,255,0.05) !important;
+  border-color: rgba(108,99,255,0.15) !important;
+}
+
+/* ── Text colors ───────────────────────────────────────────── */
+body.dark-theme [style*="color: #111827"],
+body.dark-theme [style*="color: #0F0F1A"],
+body.dark-theme [style*="color: #1F2937"] {
+  color: #F0EEFF !important;
+}
+
+body.dark-theme [style*="color: #374151"] {
+  color: #C4BDDE !important;
+}
+
+body.dark-theme [style*="color: #4B5563"] {
+  color: #A89EC9 !important;
+}
+
+body.dark-theme [style*="color: #6B7280"],
+body.dark-theme [style*="color: #9CA3AF"] {
+  color: #6B6390 !important;
+}
+
+/* ── Suggestion chips (empty state) ───────────────────────── */
+body.dark-theme [style*="rgba(255,255,255,0.75)"],
+body.dark-theme [style*="rgba(255,255,255, 0.75)"] {
+  background: rgba(255,255,255,0.05) !important;
+  border-color: rgba(108,99,255,0.2) !important;
+}
+
+body.dark-theme [style*="rgba(255,255,255,1)"] {
+  background: rgba(255,255,255,0.09) !important;
+}
+
+/* ── "Attach a PDF" pill ───────────────────────────────────── */
+body.dark-theme [style*="rgba(255,255,255,0.72)"] {
+  background: rgba(255,255,255,0.05) !important;
+  border-color: rgba(108,99,255,0.18) !important;
+}
+
+/* ── Typing indicator ──────────────────────────────────────── */
+body.dark-theme [style*="background: rgba(255,255,255"] {
+  background: rgba(255,255,255,0.05) !important;
+}
+
+/* ── Input bar ─────────────────────────────────────────────── */
+body.dark-theme [style*="background: rgba(255,255,255,0.9)"],
+body.dark-theme [style*="background: rgba(255,255,255, 0.9)"] {
+  background: rgba(15,12,35,0.95) !important;
+  border-color: rgba(108,99,255,0.22) !important;
+  box-shadow: 0 -2px 24px rgba(0,0,0,0.3) !important;
+}
+
+body.dark-theme textarea,
+body.dark-theme input[type="text"],
+body.dark-theme input:not([type="checkbox"]):not([type="radio"]) {
+  background: transparent !important;
+  color: #F0EEFF !important;
+}
+
+body.dark-theme textarea::placeholder,
+body.dark-theme input::placeholder {
+  color: #5C547A !important;
+}
+
+/* ── Upload zone ───────────────────────────────────────────── */
+body.dark-theme [style*="rgba(255,255,255,0.98)"],
+body.dark-theme [style*="rgba(255,255,255, 0.98)"] {
+  background: rgba(12,10,30,0.98) !important;
+  border-color: rgba(108,99,255,0.25) !important;
+}
+
+/* ── Settings page — section cards ────────────────────────── */
+body.dark-theme [style*="background: rgba(255,255,255,0.92)"] {
+  background: rgba(255,255,255,0.04) !important;
+  border-color: rgba(108,99,255,0.15) !important;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.35) !important;
+}
+
+/* Settings card section headers */
+body.dark-theme [style*="background: rgba(255,255,255,0.5)"] {
+  background: rgba(255,255,255,0.04) !important;
+}
+
+/* Settings select dropdowns */
+body.dark-theme select {
+  background: rgba(255,255,255,0.06) !important;
+  border-color: rgba(108,99,255,0.22) !important;
+  color: #C4BDDE !important;
+}
+
+body.dark-theme select option {
+  background: #0F0F28 !important;
+  color: #C4BDDE !important;
+}
+
+/* Settings rows border */
+body.dark-theme [style*="border-bottom: 1px solid rgba(108,99,255,0.06)"] {
+  border-bottom-color: rgba(108,99,255,0.1) !important;
+}
+
+/* Settings header */
+body.dark-theme [style*="background: linear-gradient(135deg, #F0F4FF"] {
+  background: rgba(12,10,30,0.98) !important;
+}
+
+/* Storage bar track */
+body.dark-theme [style*="background: rgba(108,99,255,0.1)"][style*="height: 6px"],
+body.dark-theme [style*="height: 6px"] {
+  background: rgba(108,99,255,0.12) !important;
+}
+
+/* Theme selector cards */
+body.dark-theme [style*="background: rgba(255,255,255,0.5)"],
+body.dark-theme [style*="background:rgba(255,255,255,0.5)"] {
+  background: rgba(255,255,255,0.04) !important;
+  border-color: rgba(108,99,255,0.15) !important;
+}
+
+/* Settings version badge */
+body.dark-theme [style*="background: rgba(255,255,255,0.7)"] {
+  background: rgba(255,255,255,0.04) !important;
+}
+
+/* ── Welcome / no-session screen ───────────────────────────── */
+body.dark-theme [style*="background: #E8ECFF"] {
+  background: #07071A !important;
+}
+
+/* Feature tags on welcome */
+body.dark-theme [style*="background: rgba(255,255,255,0.72)"],
+body.dark-theme [style*="background:rgba(255,255,255,0.72)"] {
+  background: rgba(255,255,255,0.05) !important;
+  border-color: rgba(108,99,255,0.18) !important;
+}
+
+/* ── Canvas background orbs — already transparent, stays fine */
+
+/* ── Modals (keyboard shortcuts etc.) ─────────────────────── */
+body.dark-theme [style*="background: 'rgba(15,15,26,0.4)'"],
+body.dark-theme [style*="background: rgba(15,15,26,0.4)"] {
+  background: rgba(4,3,15,0.7) !important;
+}
+
+body.dark-theme [style*="background: white; border-radius: 1.5rem"] {
+  background: #0F0F28 !important;
+  border-color: rgba(108,99,255,0.25) !important;
+}
+
+/* Kbd keys in shortcut modal */
+body.dark-theme kbd {
+  background: rgba(108,99,255,0.15) !important;
+  border-color: rgba(108,99,255,0.3) !important;
+  color: #9D8FFF !important;
+}
+
+/* ── Scrollbars global ─────────────────────────────────────── */
+body.dark-theme ::-webkit-scrollbar-thumb {
+  background: rgba(108,99,255,0.25) !important;
+}
+
+body.dark-theme ::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+/* ── Citation / source chips ───────────────────────────────── */
+body.dark-theme [style*="background: rgba(108,99,255,0.08)"] {
+  background: rgba(108,99,255,0.15) !important;
+}
+
+/* ── Toast notifications ───────────────────────────────────── */
+body.dark-theme [class*="toast"] {
+  background: #1A1835 !important;
+  color: #F0EEFF !important;
+  border: 1px solid rgba(108,99,255,0.2) !important;
+}
+
+/* ── Glow enhancement for dark — make accents pop more ──────── */
+body.dark-theme [style*="boxShadow: '0 0 8px rgba(108,99,255"],
+body.dark-theme [style*="box-shadow: 0 0 8px rgba(108,99,255"] {
+  box-shadow: 0 0 14px rgba(108,99,255,0.8) !important;
+}
+
+/* Topbar shimmer accent line — brighten on dark */
+body.dark-theme [style*="linear-gradient(90deg, #6C63FF, #9DEBFF, #C4B5FD, #6C63FF)"] {
+  opacity: 1 !important;
+  filter: brightness(1.3) !important;
+}
+
+/* ── Smooth theme transition ────────────────────────────────── */
+body {
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+body * {
+  transition:
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    color 0.3s ease,
+    box-shadow 0.35s ease !important;
+}
+
+/* Exception: don't slow down animations */
+body *[style*="animation"],
+body canvas {
+  transition: none !important;
+}
