@@ -35,8 +35,11 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-    "http://localhost:5173",
-    "https://YOUR-FRONTEND.vercel.app"],
+        "http://localhost:5173",
+        "http://localhost:3000",
+        "https://warps-rag-chatbot.vercel.app",
+        "https://warps-rag-chatbot-9enhmanyd-rajavel-project.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -51,7 +54,6 @@ app.include_router(chat.router)
 
 app.include_router(features.router)
 
-# NEW
 app.include_router(sessions.router)
 
 
