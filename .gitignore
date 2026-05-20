@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual Environment
+venv/
+env/
+.venv/
+backend/venv/
+backend/env/
+
+# Environment Variables
+.env
+*.env
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Uploads & Vectorstore
+uploads/
+vectorstore/
+backend/uploads/
+backend/vectorstore/
+
+# Node
+node_modules/
+warps/node_modules/
+dist/
+build/
+.cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
