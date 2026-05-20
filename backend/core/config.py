@@ -41,7 +41,7 @@ class Settings:
 
     EMBEDDING_MODEL: str = os.getenv(
         "EMBEDDING_MODEL",
-        "BAAI/bge-large-en-v1.5"
+       "sentence-transformers/all-MiniLM-L6-v2"
     )
 
     # ─────────────────────────────────────────────────────
